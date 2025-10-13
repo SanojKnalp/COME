@@ -1,7 +1,7 @@
 #Cmake file to setup the project
 
 #Cmake minimum required version
-cmake_minimum_required(VERSION 4.0.2)
+cmake_minimum_required(VERSION 3.31.6)
 
 #Project name and languages we are using. Currently C++ and C. We need C for PaStiX later.
 project(FEL2 LANGUAGES CXX C)
