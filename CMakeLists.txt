@@ -1,30 +1,26 @@
-cmake_minimum_required(VERSION 3.31)
-project(COME LANGUAGES CXX)
+#Cmake file to setup the project
 
+#Cmake minimum required version
+cmake_minimum_required(VERSION 3.31.6)
+
+#Project name and languages we are using. Currently C++ and C. We need C for PaStiX later.
+project(FEL2 LANGUAGES CXX C)
+
+#Print CMake version to screen
+message(Status "Using CMake ${CMAKE_VERSION}$")
+
+#Set C++ Standards
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#Enforce the standard
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
-# Armadillo (via vcpkg)
-find_package(Armadillo CONFIG REQUIRED)
+#We will use a debuggable version cause we are working on the project
+set(DEFAULT_BUILD_TYPE "Debug")
 
-# Core library
-add_library(come_lib)
+#search for all cc files in 
+file(GLOB_RECURSE SOURCES "src/*.cc")
 
-target_link_libraries(come_lib
-    PUBLIC armadillo
-)
+#generate executable
+add_executable(FEL2 ${SOURCES})
 
-target_include_directories(come_lib
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/source
-)
-
-add_subdirectory(source)
-
-# Main executable
-add_executable(COME main.cpp)
-target_link_libraries(COME PRIVATE come_lib)
-
-# Tests
-enable_testing()
-add_subdirectory(UnitTests)
-add_subdirectory(SystemTests)
+target_include_directories(FEL2 PRIVATE src)

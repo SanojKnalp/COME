@@ -1,9 +1,0 @@
-# CMake generated Testfile for 
-# Source directory: C:/Users/jonas/source/repos/COME
-# Build directory: C:/Users/jonas/source/repos/COME/out/build/x64-Debug
-# 
-# This file includes the relevant testing commands required for 
-# testing this directory and lists subdirectories to be tested as well.
-subdirs("source")
-subdirs("UnitTests")
-subdirs("SystemTests")
