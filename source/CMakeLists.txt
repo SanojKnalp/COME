@@ -1,0 +1,5 @@
+add_subdirectory(CoordinateSystems)
+add_subdirectory(Grid)
+add_subdirectory(LinearAlgebra)
+add_subdirectory(LinearSolvers)
+add_subdirectory(ProblemSolvers)
