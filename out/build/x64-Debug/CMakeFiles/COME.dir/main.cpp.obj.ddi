@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\COME.dir\\main.cpp.obj",
+            "outputs": [
+                "C:\\Users\\jonas\\source\\repos\\COME\\out\\build\\x64-Debug\\vc140.pdb",
+                "CMakeFiles\\COME.dir\\main.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

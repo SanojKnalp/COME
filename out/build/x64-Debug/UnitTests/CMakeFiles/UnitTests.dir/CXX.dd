@@ -1,0 +1,15 @@
+ninja_dyndep_version = 1.0
+build UnitTests\CMakeFiles\UnitTests.dir\UnitTestmain.cpp.obj: dyndep
+
+build UnitTests\CMakeFiles\UnitTests.dir\LinearAlgebra\LinAlg_dense_test.cpp.obj: dyndep
+
+build UnitTests\CMakeFiles\UnitTests.dir\LinearAlgebra\LinAlg_sparse_test.cpp.obj: dyndep
+
+build UnitTests\CMakeFiles\UnitTests.dir\LinearAlgebra\LinAlg_vector_test.cpp.obj: dyndep
+
+build UnitTests\CMakeFiles\UnitTests.dir\LinearSolvers\KrylovSolversTest.cpp.obj: dyndep
+
+build UnitTests\CMakeFiles\UnitTests.dir\LinearSolvers\LinearIterativeSolversTest.cpp.obj: dyndep
+
+build UnitTests\CMakeFiles\UnitTests.dir\FEM\ShapeFunctions_QP_test.cpp.obj: dyndep
+

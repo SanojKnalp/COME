@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "UnitTests\\CMakeFiles\\UnitTests.dir\\LinearAlgebra\\LinAlg_sparse_test.cpp.obj",
+            "outputs": [
+                "C:\\Users\\jonas\\source\\repos\\COME\\out\\build\\x64-Debug\\vc140.pdb",
+                "UnitTests\\CMakeFiles\\UnitTests.dir\\LinearAlgebra\\LinAlg_sparse_test.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

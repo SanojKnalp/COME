@@ -1,0 +1,6 @@
+list(APPEND UNIT_TEST_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/KrylovSolversTest.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/LinearIterativeSolversTest.cpp
+)
+
+set(UNIT_TEST_SOURCES ${UNIT_TEST_SOURCES} PARENT_SCOPE)

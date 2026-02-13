@@ -1,0 +1,314 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						13,
+						17
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "source",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"jsonFile" : "directory-source-Debug-be4710394502bfacce20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "source"
+				},
+				{
+					"build" : "source/CoordinateSystems",
+					"jsonFile" : "directory-source.CoordinateSystems-Debug-92d87c2a63c8b8a8a8f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/CoordinateSystems"
+				},
+				{
+					"build" : "source/DomainDecomposition",
+					"jsonFile" : "directory-source.DomainDecomposition-Debug-8fbda2fae315c6296c6e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/DomainDecomposition"
+				},
+				{
+					"build" : "source/FEM",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"jsonFile" : "directory-source.FEM-Debug-a233e97644cef6c3264c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/FEM"
+				},
+				{
+					"build" : "source/FEM/ShapeFunctions",
+					"jsonFile" : "directory-source.FEM.ShapeFunctions-Debug-4592a718aa734be86324.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "source/FEM/ShapeFunctions"
+				},
+				{
+					"build" : "source/FEM/Quadrature",
+					"jsonFile" : "directory-source.FEM.Quadrature-Debug-ed31ea70122cb593c79c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "source/FEM/Quadrature"
+				},
+				{
+					"build" : "source/Grid",
+					"jsonFile" : "directory-source.Grid-Debug-a87a066f28a2b271d312.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/Grid"
+				},
+				{
+					"build" : "source/InputParsing",
+					"jsonFile" : "directory-source.InputParsing-Debug-4a21c3d0bf0873fd3581.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/InputParsing"
+				},
+				{
+					"build" : "source/LinearAlgebra",
+					"jsonFile" : "directory-source.LinearAlgebra-Debug-3fa31b9134e46b7f8b3e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/LinearAlgebra"
+				},
+				{
+					"build" : "source/LinearSolvers",
+					"jsonFile" : "directory-source.LinearSolvers-Debug-7a5c5e4f2bccc8691ea5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/LinearSolvers"
+				},
+				{
+					"build" : "source/Postprocessing",
+					"jsonFile" : "directory-source.Postprocessing-Debug-2d216327c13047858981.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/Postprocessing"
+				},
+				{
+					"build" : "source/ProblemSolvers",
+					"jsonFile" : "directory-source.ProblemSolvers-Debug-c81c7fbfdd4ffbb6b64c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "source/ProblemSolvers"
+				},
+				{
+					"build" : "UnitTests",
+					"childIndexes" : 
+					[
+						14,
+						15,
+						16
+					],
+					"jsonFile" : "directory-UnitTests-Debug-95c6836c1d89eba0bd49.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "UnitTests",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "UnitTests/LinearAlgebra",
+					"jsonFile" : "directory-UnitTests.LinearAlgebra-Debug-60af76f577d7bcaa9ddc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "UnitTests/LinearAlgebra"
+				},
+				{
+					"build" : "UnitTests/LinearSolvers",
+					"jsonFile" : "directory-UnitTests.LinearSolvers-Debug-33cd7baadefe0f3ab940.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "UnitTests/LinearSolvers"
+				},
+				{
+					"build" : "UnitTests/FEM",
+					"jsonFile" : "directory-UnitTests.FEM-Debug-2c3325e22e849c709d69.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "UnitTests/FEM"
+				},
+				{
+					"build" : "SystemTests",
+					"jsonFile" : "directory-SystemTests-Debug-3a50e3324ed98c077523.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.31"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SystemTests"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					],
+					"name" : "COME",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "COME::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-COME-Debug-8dcef459cddeb167a39a.json",
+					"name" : "COME",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "UnitTests::@ccadf856e7f39611d9a4",
+					"jsonFile" : "target-UnitTests-Debug-658f92cd5a11eb02a805.json",
+					"name" : "UnitTests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "come_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-come_lib-Debug-eb4635904e495b990a72.json",
+					"name" : "come_lib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jonas/source/repos/COME/out/build/x64-Debug",
+		"source" : "C:/Users/jonas/source/repos/COME"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

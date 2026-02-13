@@ -1,0 +1,86 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/jonas/source/repos/COME/out/build/x64-Debug",
+	"dir-cur-src" : "C:/Users/jonas/source/repos/COME",
+	"dir-top-bld" : "C:/Users/jonas/source/repos/COME/out/build/x64-Debug",
+	"dir-top-src" : "C:/Users/jonas/source/repos/COME",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"C:\\Users\\jonas\\source\\repos\\COME\\source",
+		"C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/jonas/source/repos/COME/out/build/x64-Debug/CMakeFiles/come_lib.dir",
+	"sources" : 
+	{
+		"CMakeFiles/come_lib.dir/source/CoordinateSystems/COME_Coordinate_System.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/CoordinateSystems/COME_Coordinate_System.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/FEM/Quadrature/COME_Quadrature_QGauss.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/FEM/Quadrature/COME_Quadrature_QGauss.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/FEM/ShapeFunctions/COME_ShapeFunctions_QP.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/FEM/ShapeFunctions/COME_ShapeFunctions_QP.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/Grid/COME_AbsTopologicalComponent.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/Grid/COME_AbsTopologicalComponent.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/Grid/COME_Edge.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/Grid/COME_Edge.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/Grid/COME_Element.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/Grid/COME_Element.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/Grid/COME_Face.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/Grid/COME_Face.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/Grid/COME_Mesh.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/Grid/COME_Mesh.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/Grid/COME_Node.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/Grid/COME_Node.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/LinearSolvers/COME_KrylovSolvers.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/LinearSolvers/COME_KrylovSolvers.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/LinearSolvers/COME_LinearIterativeSolvers.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/LinearSolvers/COME_LinearIterativeSolvers.cpp"
+		},
+		"CMakeFiles/come_lib.dir/source/ProblemSolvers/COME_NonlinearSolvers.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/jonas/source/repos/COME/source/ProblemSolvers/COME_NonlinearSolvers.cpp"
+		}
+	}
+}

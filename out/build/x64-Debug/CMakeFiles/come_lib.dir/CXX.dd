@@ -1,0 +1,17 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles\come_lib.dir\source\CoordinateSystems\COME_Coordinate_System.cpp.obj: dyndep
+
+build CMakeFiles\come_lib.dir\source\FEM\ShapeFunctions\COME_ShapeFunctions_QP.cpp.obj: dyndep
+
+build CMakeFiles\come_lib.dir\source\FEM\Quadrature\COME_Quadrature_QGauss.cpp.obj: dyndep
+
+build CMakeFiles\come_lib.dir\source\Grid\COME_Node.cpp.obj: dyndep
+
+build CMakeFiles\come_lib.dir\source\Grid\COME_Mesh.cpp.obj: dyndep
+
+build CMakeFiles\come_lib.dir\source\LinearSolvers\COME_LinearIterativeSolvers.cpp.obj: dyndep
+
+build CMakeFiles\come_lib.dir\source\LinearSolvers\COME_KrylovSolvers.cpp.obj: dyndep
+
+build CMakeFiles\come_lib.dir\source\ProblemSolvers\COME_NonlinearSolvers.cpp.obj: dyndep
+
