@@ -8,6 +8,7 @@ target_sources(come_lib
         COME_Face.cpp
         COME_Node.cpp
         COME_Mesh.cpp
+        COME_Volume.cpp
         
 
         #headers
@@ -17,4 +18,5 @@ target_sources(come_lib
         COME_Face.hpp
         COME_Mesh.hpp
         COME_Node.hpp
+        COME_Volume.hpp
 )

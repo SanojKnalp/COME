@@ -9,15 +9,15 @@ namespace Mesh
 	class Node : public AbsTopologicalComponent<dim,spacedim>
 	{
 	public:
+		Node() = default;
 		Node(int id, std::array<double, spacedim> position) :
-			meshid_(id), position_(position) {
+		 DOFIndex_(id),position_(position) {
 		}
 		std::array<double, spacedim> getCoordinates()const ;
-		int getMeshid() const;
 	private:
 		std::array<double,spacedim> position_;
-		int meshid_;
-		Node* subNode_;
+		Node* subNode_ = nullptr;
+		int DOFIndex_;
 
 	};
 

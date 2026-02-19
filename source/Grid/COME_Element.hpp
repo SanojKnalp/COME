@@ -10,10 +10,11 @@ namespace Mesh
 	{
 	public:
 		void addTopologicalComponent(AbsTopologicalComponent<dim, spacedim>* comp);
-		const std::vector<AbsTopologicalComponent<dim, spacedim>*>& getTopologicalSupport() const;
+		const AbsTopologicalComponent<dim, spacedim>* getTopologicalSupport() const;
+		void setTopologicalSupport(AbsTopologicalComponent<dim, spacedim>* comp);
 
 	private:
-		std::vector<AbsTopologicalComponent<dim, spacedim>*> topologicalSupport_;
+		AbsTopologicalComponent<dim, spacedim>* topologicalSupport_ = nullptr;
 		std::vector<Element<dim,spacedim>*> listOfSubElements_;
 	};
 }

@@ -12,6 +12,8 @@ namespace Mesh
 	class Volume : public AbsTopologicalComponent<dim, spacedim>
 	{
 	public:
+		Volume() = default;
+		void linkNodes(std::array<int, 1 << spacedim>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
 
 	private:
 

@@ -1,0 +1,527 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.44.35222.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/3.31.6-msvc6/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        Note: including file: C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-lb01u1"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-lb01u1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-lb01u1'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_9067b
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_9067b.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_9067b.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_9067b.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_9067b.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_9067b.exe /implib:cmTC_9067b.lib /pdb:cmTC_9067b.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindBLAS.cmake:379 (check_function_exists)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindBLAS.cmake:764 (check_blas_libraries)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/blas/vcpkg-cmake-wrapper.cmake:7 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:10 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n93o0d"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n93o0d"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "BLAS_openblas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-n93o0d'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_fdf91
+        [1/4] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"   /DWIN32 /D_WINDOWS /EHsc -DCHECK_FUNCTION_EXISTS=sgemm_ /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-n93o0d\\CheckFunctionExists.cxx -nologo -TP -showIncludes -scanDependencies CMakeFiles\\cmTC_fdf91.dir\\CheckFunctionExists.cxx.obj.ddi -FoCMakeFiles\\cmTC_fdf91.dir\\CheckFunctionExists.cxx.obj
+        [2/4] "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E cmake_ninja_dyndep --tdi=CMakeFiles\\cmTC_fdf91.dir\\CXXDependInfo.json --lang=CXX --modmapfmt=msvc --dd=CMakeFiles\\cmTC_fdf91.dir\\CXX.dd @CMakeFiles\\cmTC_fdf91.dir\\CXX.dd.rsp
+        [3/4] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc -DCHECK_FUNCTION_EXISTS=sgemm_ /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi /showIncludes @CMakeFiles\\cmTC_fdf91.dir\\CheckFunctionExists.cxx.obj.modmap /FoCMakeFiles\\cmTC_fdf91.dir\\CheckFunctionExists.cxx.obj /FdCMakeFiles\\cmTC_fdf91.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-n93o0d\\CheckFunctionExists.cxx
+        [4/4] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_fdf91.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_fdf91.dir\\CheckFunctionExists.cxx.obj  /out:cmTC_fdf91.exe /implib:cmTC_fdf91.lib /pdb:cmTC_fdf91.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:89 (enable_language)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      CMakeCCompilerId.c
+      Microsoft (R) Incremental Linker Version 14.44.35222.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCCompilerId.exe 
+      CMakeCCompilerId.obj 
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/3.31.6-msvc6/CompilerIdC/CMakeCCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:1288 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:250 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:89 (enable_language)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        main.c
+        Note: including file: C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Note: including file: "
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:89 (enable_language)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rtw48u"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rtw48u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rtw48u'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_594c4
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_594c4.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_594c4.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.31\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_594c4.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_594c4.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_594c4.exe /implib:cmTC_594c4.lib /pdb:cmTC_594c4.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:89 (enable_language)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:900 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:224 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4y0vy9"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4y0vy9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-4y0vy9'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_d5d54
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_d5d54.dir\\src.c.obj /FdCMakeFiles\\cmTC_d5d54.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-4y0vy9\\src.c
+        FAILED: CMakeFiles/cmTC_d5d54.dir/src.c.obj 
+        "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_d5d54.dir\\src.c.obj /FdCMakeFiles\\cmTC_d5d54.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-4y0vy9\\src.c
+        C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-4y0vy9\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:900 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:224 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rzgoq2"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rzgoq2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-rzgoq2'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_78490
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_78490.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_78490.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-rzgoq2\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_78490.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_78490.dir\\CheckFunctionExists.c.obj  /out:cmTC_78490.exe /implib:cmTC_78490.lib /pdb:cmTC_78490.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_78490.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_78490.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_78490.dir\\CheckFunctionExists.c.obj  /out:cmTC_78490.exe /implib:cmTC_78490.lib /pdb:cmTC_78490.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_78490.dir\\CheckFunctionExists.c.obj /out:cmTC_78490.exe /implib:cmTC_78490.lib /pdb:cmTC_78490.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_78490.dir/intermediate.manifest CMakeFiles\\cmTC_78490.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib'\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:900 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:224 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-sse1m9"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-sse1m9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-sse1m9'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_5583e
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_5583e.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_5583e.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-sse1m9\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_5583e.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_5583e.dir\\CheckFunctionExists.c.obj  /out:cmTC_5583e.exe /implib:cmTC_5583e.lib /pdb:cmTC_5583e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_5583e.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_5583e.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_5583e.dir\\CheckFunctionExists.c.obj  /out:cmTC_5583e.exe /implib:cmTC_5583e.lib /pdb:cmTC_5583e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_5583e.dir\\CheckFunctionExists.c.obj /out:cmTC_5583e.exe /implib:cmTC_5583e.lib /pdb:cmTC_5583e.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_5583e.dir/intermediate.manifest CMakeFiles\\cmTC_5583e.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib'\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:176 (check_function_exists)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:287 (check_lapack_libraries)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bk9em8"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bk9em8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "LAPACK_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-bk9em8'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_763ff
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=cheev_ /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_763ff.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_763ff.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-bk9em8\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_763ff.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_763ff.dir\\CheckFunctionExists.c.obj  /out:cmTC_763ff.exe /implib:cmTC_763ff.lib /pdb:cmTC_763ff.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_763ff.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_763ff.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_763ff.dir\\CheckFunctionExists.c.obj  /out:cmTC_763ff.exe /implib:cmTC_763ff.lib /pdb:cmTC_763ff.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_763ff.dir\\CheckFunctionExists.c.obj /out:cmTC_763ff.exe /implib:cmTC_763ff.lib /pdb:cmTC_763ff.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_763ff.dir/intermediate.manifest CMakeFiles\\cmTC_763ff.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol cheev_ referenced in function main\x0d
+        cmTC_763ff.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:176 (check_function_exists)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:350 (check_lapack_libraries)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-zpyy52"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-zpyy52"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "LAPACK_openblas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-zpyy52'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_e5b99
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=cheev_ /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_e5b99.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_e5b99.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-zpyy52\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_e5b99.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_e5b99.dir\\CheckFunctionExists.c.obj  /out:cmTC_e5b99.exe /implib:cmTC_e5b99.lib /pdb:cmTC_e5b99.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_e5b99.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_e5b99.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_e5b99.dir\\CheckFunctionExists.c.obj  /out:cmTC_e5b99.exe /implib:cmTC_e5b99.lib /pdb:cmTC_e5b99.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_e5b99.dir\\CheckFunctionExists.c.obj /out:cmTC_e5b99.exe /implib:cmTC_e5b99.lib /pdb:cmTC_e5b99.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_e5b99.dir/intermediate.manifest CMakeFiles\\cmTC_e5b99.dir/manifest.res" failed (exit code 1120) with the following output:
+        CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol cheev_ referenced in function main\x0d
+        cmTC_e5b99.exe : fatal error LNK1120: 1 unresolved externals\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:176 (check_function_exists)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/FindLAPACK.cmake:457 (check_lapack_libraries)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack/vcpkg-cmake-wrapper.cmake:19 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/ArmadilloConfig.cmake:14 (find_dependency)"
+      - "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/Armadillo/vcpkg-cmake-wrapper.cmake:4 (_find_package)"
+      - "C:/Users/jonas/private_stuff/vcpkg/scripts/buildsystems/vcpkg.cmake:854 (include)"
+      - "CMakeLists.txt:8 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-wsbdgn"
+      binary: "C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-wsbdgn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/jonas/private_stuff/vcpkg/installed/x64-windows/share/lapack"
+      VCPKG_INSTALLED_DIR: "C:/Users/jonas/private_stuff/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/jonas/private_stuff/vcpkg"
+    buildResult:
+      variable: "LAPACK_lapack_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jonas/private_stuff/FEL2/out/build/x64-Debug/CMakeFiles/CMakeScratch/TryCompile-wsbdgn'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_d9c45
+        [1/2] "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe"  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=cheev_ /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_d9c45.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_d9c45.dir\\ /FS -c C:\\Users\\jonas\\private_stuff\\FEL2\\out\\build\\x64-Debug\\CMakeFiles\\CMakeScratch\\TryCompile-wsbdgn\\CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1944 --intdir=CMakeFiles\\cmTC_d9c45.dir --rc="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" --mt="C:\\PROGRA~2\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" --manifests  -- "C:\\PROGRA~1\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" /nologo CMakeFiles\\cmTC_d9c45.dir\\CheckFunctionExists.c.obj  /out:cmTC_d9c45.exe /implib:cmTC_d9c45.lib /pdb:cmTC_d9c45.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\lapack.lib  C:\\Users\\jonas\\private_stuff\\vcpkg\\installed\\x64-windows\\debug\\lib\\openblas.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        
+      exitCode: 0
+...

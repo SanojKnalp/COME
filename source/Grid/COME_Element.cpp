@@ -5,14 +5,20 @@ namespace Mesh
 	template <int dim, int spacedim>
 	void Element<dim,spacedim>::addTopologicalComponent(AbsTopologicalComponent<dim, spacedim>* comp)
 	{
-		topologicalSupport_.push_back(comp);
+		topologicalSupport_ = comp;
 		comp->addAdjacentElement(this);
 	}
 
 	template <int dim, int spacedim>
-	const std::vector<AbsTopologicalComponent<dim, spacedim>*>& Element<dim, spacedim>::getTopologicalSupport() const
+	const AbsTopologicalComponent<dim, spacedim>* Element<dim, spacedim>::getTopologicalSupport() const
 	{
 		return topologicalSupport_;
+	}
+
+	template <int dim, int spacedim>
+	void Element<dim, spacedim>::setTopologicalSupport(AbsTopologicalComponent<dim, spacedim>* comp)
+	{
+		topologicalSupport_ = comp;
 	}
 }
 

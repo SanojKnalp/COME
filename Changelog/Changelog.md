@@ -2,6 +2,14 @@
 All the changes i make to the code are documented here.
 ## 2026 
 ### February
+#### 17.02.2026
+Continued with Mesh ReadIn. Number of Volumes is now correct.
+However we need to abstract more such that we can use our addVolume functions and so for.
+Also i feel like i'm finally at the point where i don't really need ChatGPT anymore. Shit is getting easier. Also when i do things myself it's getting better cause i know what i want.
+Next step: We have created the element and the highest volume. Now we need to create the respective edges, faces and so for.
+We will not use non-default constructor here due to the nature of how different meshes work.
+#### 13.02.2026
+Added changes to github.
 #### 12.02.2026
 Worked again on a bit of mesh stuff, especially the connection between AbsTopological Component and Element. Next step is finishing the element creation
 #### 09.02.2026 

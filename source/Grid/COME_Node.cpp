@@ -2,11 +2,6 @@
 
 namespace Mesh
 {
-	template<int dim,int spacedim>
-	int Node<dim, spacedim>::getMeshid() const
-	{
-		return meshid_;
-	}
 
 	template<int dim, int spacedim>
 	std::array<double, spacedim> Node<dim, spacedim>::getCoordinates() const
