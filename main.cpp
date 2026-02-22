@@ -11,6 +11,7 @@
 #include "LinearSolvers/COME_LinearIterativeSolvers.hpp"
 #include "LinearAlgebra/COME_Linalg_dense.hpp"
 #include "Grid/COME_Mesh.hpp"
+#include "FEM/Quadrature/COME_Quadrature_QGauss.hpp"
 #include <iostream>
 #include <istream>
 #include <fstream>
@@ -97,7 +98,10 @@ int main() {
     std::ifstream input_file("../../../Meshes/Abaqus3DHexaUniformBeam.inp");
 
     mesh.read_abaqus(input_file);
-    
+
+    Quadrature::QGauss<1> quad(2);
+    std::cout << "gauss order" << quad.getQuadratureOrder() << std::endl;
+
 
 
 

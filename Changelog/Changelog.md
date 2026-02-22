@@ -2,6 +2,8 @@
 All the changes i make to the code are documented here.
 ## 2026 
 ### February
+#### 22.02.2026
+Reworked current and finished implementation of basic QGauss weights and coordinates in 1d. Also added it's constructor.
 #### 17.02.2026
 Continued with Mesh ReadIn. Number of Volumes is now correct.
 However we need to abstract more such that we can use our addVolume functions and so for.

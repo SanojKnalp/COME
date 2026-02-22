@@ -1,3 +1,7 @@
+#pragma once
+#include <iostream>
+#include <vector>
+
 namespace Quadrature
 {
 	template<int dim>
@@ -7,8 +11,8 @@ namespace Quadrature
 		Quadrature(int order) 
 			: quadOrder_(order) {};
 		int getQuadratureOrder() const;
-		virtual double  getQuadratureWeight() const = 0;
-		virtual double getQuadraturePoint() const = 0;
+		virtual std::vector<double>  getQuadratureWeights() const = 0;
+		virtual std::vector<double> getQuadraturePoints() const = 0;
 
 	protected:
 		int quadOrder_;
