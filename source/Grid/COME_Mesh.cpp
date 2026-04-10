@@ -27,7 +27,9 @@ namespace Mesh
 		if (inserted)
 		{
 			listOfEdges_.emplace_back(std::make_unique<Edge<dim, spacedim>>());
+			Edge<dim, spacedim>* ptr = listOfEdges_.back().get();
 			listOfEdges_.back()->linkNodes(std::array{ minNode,maxNode }, nodeIdMap_);
+			edgeMap_[key] = ptr;
 		}
 	}
 	template <int dim, int spacedim>

@@ -13,7 +13,7 @@ namespace Mesh
 		Node(int id, std::array<double, spacedim> position) :
 		 position_(position) {
 		}
-		std::array<double, spacedim> getCoordinates() const ;
+		const std::array<double, spacedim> getCoordinates() const ;
 	private:
 		std::array<double,spacedim> position_;
 		Node* subNode_ = nullptr;

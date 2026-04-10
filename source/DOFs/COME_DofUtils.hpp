@@ -8,7 +8,7 @@ namespace DOFs
 	class DOF
 	{
 	public:
-		DOF(std::array<double, spacedim>& coordinates, unsigned int ID)
+		DOF(const std::array<double, spacedim>& coordinates, unsigned int ID)
 			: coordinates_(coordinates), ID_(ID) 
 		{}
 

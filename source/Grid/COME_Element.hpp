@@ -10,7 +10,7 @@ namespace Mesh
 	{
 	public:
 		void addTopologicalComponent(AbsTopologicalComponent<dim, spacedim>* comp);
-		const AbsTopologicalComponent<dim, spacedim>* getTopologicalSupport() const;
+		AbsTopologicalComponent<dim, spacedim>* getTopologicalSupport() const;
 		void setTopologicalSupport(AbsTopologicalComponent<dim, spacedim>* comp);
 
 	private:

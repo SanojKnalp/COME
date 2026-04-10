@@ -60,11 +60,12 @@ void ExampleProblem<dim>::readInMesh()
 template <int dim>
 void ExampleProblem<dim>::setup_system()
 {
-    dof_handler.distribute_dofs(fe);
-    std::cout << "n dofs" << dof_handler.number_of_dofs() << std::endl;
-    system_matrix.reinit(5);
-    system_rhs.reinit(5);
-    solution.reinit(5);
+    dof_handler.distribute_dofs(fe); 
+    unsigned int n_dofs = dof_handler.number_of_dofs();
+    std::cout << "n dofs" << n_dofs << std::endl;
+    system_matrix.reinit(n_dofs);
+    system_rhs.reinit(n_dofs);
+    solution.reinit(n_dofs);
     
 }
 

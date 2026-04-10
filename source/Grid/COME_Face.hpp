@@ -16,6 +16,8 @@ namespace Mesh
 
 		void linkNodes(const std::array<int, 4>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
 		void linkEdges(const std::array<int, 4>& nodes, std::map<std::pair<int, int>, Edge<dim, spacedim>*>& edgeMap);
+
+		std::array<double, spacedim> interpolate(unsigned int i, unsigned int p);
 	private:
 		std::vector<Node<dim,spacedim>*> listOfNodes_;
 		std::vector<Edge<dim,spacedim>*> listOfEdges_;

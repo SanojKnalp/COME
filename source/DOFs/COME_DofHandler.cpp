@@ -11,35 +11,80 @@ namespace DOFs
 		// This way we don't produce duplicates for continuous elements and actually duplicate for discontinuous elements.
 		if (fe.isDiscontinuous())
 		{
+			/*unsigned int next_dof = 0;
+			unsigned int p = fe.getPolynomialDegree();
+			unsigned int n_local_dofs = std::pow(p + 1, dim);
 			for (const auto& elem : mesh_.getElements())
 			{
-				// loop over all nodes, edges, faces and add the missing volume points
-				std::cout << "test" << elem->getTopologicalSupport() << std::endl;
-			}
+				for (unsigned int i = 0; i < n_local_dofs; ++i)
+				{
+					auto coord = elem->interpolate_tensor_product(i, p);
+
+					elem->getTopologicalSupport()->add_dof(next_dof);
+					DoFList_.push_back(std::make_unique<DOF<dim, spacedim>>(coord, next_dof));
+					++next_dof;
+				}
+			}*/
 		}
 		else
 		{
-			for (const auto& node : mesh_.getNodes())
+			unsigned int next_dof = 1;
+			unsigned int p = fe.getPolynomialDegree();
+			unsigned int edge_dofs = (p >= 2) ? (p - 1) : 0;
+
+			// 1. vertices
+			for (auto& node : mesh_.getNodes())
 			{
-				// add the DOFs
+				node->add_dof(next_dof);
+				DoFList_.push_back(std::make_unique<DOF<dim, spacedim>>(node->getCoordinates(), next_dof));
+				next_dof += 1;
 			}
-			
-			for (const auto& edge : mesh_.getEdges())
+
+			// 2. edges
+			if (edge_dofs > 0)
 			{
-				// add DOFs based on the number of edges
+				for (auto& edge : mesh_.getEdges())
+				{
+					for (unsigned int i = 0; i < edge_dofs; ++i)
+					{
+						auto coord = edge->interpolate(i + 1, p);
+
+						edge->add_dof(next_dof);
+						DoFList_.push_back(std::make_unique<DOF<dim, spacedim>>(coord, next_dof));
+						next_dof += 1;
+					}
+				}
 			}
+
+			// 3. faces (2D/3D)
 			if constexpr (dim >= 2)
 			{
-				for (const auto& face : mesh_.getFaces())
-				{
-					// add DOFs based on the number of faces
-				}
+				unsigned int face_dofs = (p >= 2) ? (p - 1) * (p - 1) : 0;
 
-				if constexpr (dim == 3)
+				for (auto& face : mesh_.getFaces())
 				{
-					for (const auto& volume : mesh_.getVolumes())
+					for (unsigned int i = 0; i < face_dofs; ++i)
 					{
-						// add DOFs based on the volume
+						auto coord = face->interpolate(i, p);
+
+						face->add_dof(next_dof);
+						DoFList_.push_back(std::make_unique<DOF<dim, spacedim>>(coord, next_dof));
+						next_dof += 1;
+					}
+				}
+			}
+
+			if constexpr (dim == 3)
+			{
+				unsigned int volume_dofs = (p >= 2) ? (p - 1) * (p - 1) * (p - 1) : 0;
+				for (auto& volume : mesh_.getVolumes())
+				{
+					for (unsigned int i = 0; i < volume_dofs; i++)
+					{
+						auto coord = volume->interpolate(i, p);
+						volume->add_dof(next_dof);
+						DoFList_.push_back(std::make_unique<DOF<dim, spacedim>>(coord, next_dof));
+						next_dof += 1;
 					}
 				}
 			}

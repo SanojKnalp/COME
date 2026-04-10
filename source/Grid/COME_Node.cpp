@@ -4,7 +4,7 @@ namespace Mesh
 {
 
 	template<int dim, int spacedim>
-	std::array<double, spacedim> Node<dim, spacedim>::getCoordinates() const
+	const std::array<double, spacedim> Node<dim, spacedim>::getCoordinates() const
 	{
 		return position_;
 	}

@@ -10,7 +10,7 @@ namespace Mesh
 	}
 
 	template <int dim, int spacedim>
-	const AbsTopologicalComponent<dim, spacedim>* Element<dim, spacedim>::getTopologicalSupport() const
+	AbsTopologicalComponent<dim, spacedim>* Element<dim, spacedim>::getTopologicalSupport() const
 	{
 		return topologicalSupport_;
 	}

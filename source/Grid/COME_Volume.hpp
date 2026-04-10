@@ -18,6 +18,7 @@ namespace Mesh
 		void linkFaces(const std::array<int, 8>& nodes, std::map<std::array<int, 4>, Face<dim, spacedim>*>& faceMap);
 
 		std::vector<Node<dim, spacedim>*> getNodes() const;
+		std::array<double, spacedim> interpolate(unsigned int i, unsigned int p);
 
 	private:
 

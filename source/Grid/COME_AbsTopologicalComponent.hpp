@@ -21,12 +21,16 @@ namespace Mesh
 		void activate() { isActive_ = true; };
 		void addAdjacentElement(Element<dim, spacedim>* el);
 		const std::vector<Element<dim, spacedim>*>& getAdjacentElements() const;
+		void add_dof(unsigned int id);
+		const std::vector<unsigned int>& get_dofs() const;
+		void clear_dofs();
 
 	protected:
 		unsigned int polynomialDegree_ = 1;
 		bool isActive_ = false;
 		std::vector<Element<dim,spacedim>*> listOfAdjacentElements_;
 		unsigned int refinementLevel_ = 0;
+		std::vector<unsigned int> dof_ids_;
 
 	};
 
@@ -39,6 +43,24 @@ namespace Mesh
 	const std::vector<Element<dim, spacedim>*>& AbsTopologicalComponent<dim, spacedim>::getAdjacentElements() const
 	{
 		return listOfAdjacentElements_;
+	}
+
+	template<int dim, int spacedim>
+	void AbsTopologicalComponent<dim, spacedim>::add_dof(unsigned int id)
+	{
+		dof_ids_.push_back(id);
+	}
+
+	template<int dim, int spacedim>
+	const std::vector<unsigned int>& AbsTopologicalComponent<dim, spacedim>::get_dofs() const
+	{
+		return dof_ids_;
+	}
+
+	template<int dim, int spacedim>
+	void AbsTopologicalComponent<dim, spacedim>::clear_dofs()
+	{
+		dof_ids_.clear();
 	}
 
 }

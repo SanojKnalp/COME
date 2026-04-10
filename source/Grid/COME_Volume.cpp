@@ -75,6 +75,56 @@ namespace Mesh
             }
         }
     }
+
+    template <int dim, int spacedim>
+    std::array<double, spacedim> Volume<dim, spacedim>::interpolate(unsigned int i, unsigned int p)
+    {
+        unsigned int xIndex = i % (p-1) ;
+        unsigned int yIndex = (i / (p-1)) % (p-1) +1;
+        unsigned int zIndex = i /((p-1)*(p-1)) +1;
+
+        std::array<double, spacedim> sharedNode = listOfNodes_[0]->getCoordinates();
+        std::array<double, spacedim> interpolatedX;
+        std::array<double, spacedim> interpolatedY;
+        std::array<double, spacedim> interpolatedZ;
+
+        int hit = 0;
+        for (const auto& edge : listOfEdges_)
+        {
+            for (const auto& node : edge->getListOfNodes())
+            {
+                if (node->getCoordinates() == sharedNode && hit == 0)
+                {
+                    interpolatedX = edge->interpolate(xIndex, p);
+                    hit += 1;
+                }
+                else if (node->getCoordinates() == sharedNode && hit == 1)
+                {
+                    interpolatedY = edge->interpolate(yIndex , p);
+                    hit += 1;
+                }
+                else if (node->getCoordinates() == sharedNode && hit == 2)
+                {
+                    interpolatedZ = edge->interpolate(zIndex, p);
+                    hit += 1;
+                }
+            }
+        }
+
+
+        std::array<double, spacedim> result;
+
+        for (unsigned int d = 0; d < spacedim; ++d)
+        {
+            result[d] =
+                sharedNode[d]
+                + (interpolatedX[d] - sharedNode[d])
+                + (interpolatedY[d] - sharedNode[d])
+                + (interpolatedZ[d] - sharedNode[d]);
+        }
+
+        return result;
+    }
 }
 
 template class Mesh::Volume<1>;

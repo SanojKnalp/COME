@@ -23,6 +23,12 @@ namespace FEM
 		return TensorProductShapeFunctionsValue(index, qPoints_[q_point]);
 	}
 
+	template <int dim, int spacedim>
+	double FEValues<dim, spacedim>::JacobianDeterminant()
+	{
+
+	}
+
 	
 	template <int dim, int spacedim>
 	const double& FEValues<dim, spacedim>::JxW(const unsigned int q_point) const

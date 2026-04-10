@@ -11,7 +11,7 @@ namespace FEM
 	class FEValues
 	{
 	public:
-		FEValues(ShapeFunctions::ShapeFunctions<dim, spacedim>& fe,Quadrature::Quadrature<dim>& quadrature, bool update_values = true)
+		FEValues(ShapeFunctions::ShapeFunctions<dim, spacedim>& fe, Quadrature::Quadrature<dim>& quadrature, bool update_values = true)
 			: fe_(fe)
 			, quadrature_(quadrature)
 			, update_values_(update_values)
@@ -21,6 +21,7 @@ namespace FEM
 
 		const double& shape_value(const unsigned int index, const unsigned int q_point) const;
 		const double& JxW(const unsigned int q_point) const;
+		void reinit();
 
 	private:
 
@@ -34,6 +35,7 @@ namespace FEM
 
 		double TensorproductShapeFunctionsValue(const unsigned int index, std::array<double,dim>& localPoints) const;
 		void TensorProductQPointsAndWeights();
+		double JacobianDeterminant();
 
 	};
 

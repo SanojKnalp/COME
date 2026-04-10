@@ -5,6 +5,7 @@
 #include "COME_Face.hpp"
 #include "COME_Volume.hpp"
 #include "Grid/COME_AbsTopologicalComponent.hpp"
+#include "FEM/FEValues/COME_FEValues.hpp"
 
 #include <iostream>
 #include <vector>
@@ -63,7 +64,6 @@ namespace Mesh
 		std::unordered_map<int, Node<dim, spacedim>*> nodeIdMap_;
 		std::map<std::pair<int, int>, Edge<dim, spacedim>*> edgeMap_; //smart way of storing an Edge pointer with a node mapping.
 		std::map<std::array<int, 4>, Face<dim, spacedim>*> faceMap_;
-
 
 
 		enum AbaqusMeshSection {

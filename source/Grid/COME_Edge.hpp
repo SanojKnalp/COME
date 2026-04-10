@@ -3,6 +3,7 @@
 #include "COME_Node.hpp"
 #include <iostream>
 #include <vector>
+#include <array>
 
 namespace Mesh
 {
@@ -13,6 +14,12 @@ namespace Mesh
 		Edge() = default;
 
 		void linkNodes(const std::array<int, 2>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
+
+		std::array<double, spacedim> interpolate(unsigned int i, unsigned int p);
+
+		const std::vector<Node<dim, spacedim>*>& getListOfNodes() const;
+
+
 	private:
 		std::vector<Node<dim,spacedim>*> listOfNodes_;
 		std::vector<Edge<dim,spacedim>*> listOfSubEdges_;
