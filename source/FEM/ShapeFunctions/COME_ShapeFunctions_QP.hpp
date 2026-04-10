@@ -8,7 +8,7 @@ namespace ShapeFunctions
 	{
 	public:
 		FE_QP(unsigned int polynomial_degree)
-			: ShapeFunctions<dim, spacedim>(polynomial_degree)
+			: ShapeFunctions<dim, spacedim>(polynomial_degree, false)
 		{}
 
 		virtual double get_shape_function_value(const unsigned int index, const double qPointValue) const; //We only pass the quadrature value as we will use the abstract class ShapeFunctions to then later evaluate 

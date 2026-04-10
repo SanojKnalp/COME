@@ -12,9 +12,10 @@ namespace Mesh
 	public:
 		Edge() = default;
 
-		void linkNodes(std::array<int, 1 << spacedim>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
+		void linkNodes(const std::array<int, 2>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
 	private:
 		std::vector<Node<dim,spacedim>*> listOfNodes_;
 		std::vector<Edge<dim,spacedim>*> listOfSubEdges_;
+		
 	};
 }

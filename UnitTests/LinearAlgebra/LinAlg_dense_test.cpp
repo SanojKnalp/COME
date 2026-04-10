@@ -228,3 +228,12 @@ TEST_CASE("Full matrix 3*3 inversion")
     REQUIRE(A(0, 2) == 0.125);
     REQUIRE(A(1, 0) == 0.0);
 }
+
+TEST_CASE("Full Matrix reinit")
+{
+    using namespace LinearAlgebra;
+    FullMatrix<float> A;
+    REQUIRE(A.cols() == 0);
+    A.reinit(5);
+    REQUIRE(A.cols() == 5);
+}

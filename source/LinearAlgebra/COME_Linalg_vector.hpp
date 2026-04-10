@@ -49,6 +49,11 @@ namespace LinearAlgebra {
             col(i) = value;
         }
 
+        void reinit(size_t size)
+        {
+            col.zeros(size);
+        }
+
         // Norm
         T norm(int p) const {
             return arma::norm(col, p);

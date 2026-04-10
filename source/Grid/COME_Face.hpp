@@ -4,6 +4,7 @@
 #include "COME_Node.hpp"
 #include <iostream>
 #include <vector>
+#include <map>
 
 namespace Mesh
 {
@@ -13,7 +14,8 @@ namespace Mesh
 	public:
 		Face() = default;
 
-		void linkNodes(std::array<int, 1 << spacedim>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
+		void linkNodes(const std::array<int, 4>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
+		void linkEdges(const std::array<int, 4>& nodes, std::map<std::pair<int, int>, Edge<dim, spacedim>*>& edgeMap);
 	private:
 		std::vector<Node<dim,spacedim>*> listOfNodes_;
 		std::vector<Edge<dim,spacedim>*> listOfEdges_;

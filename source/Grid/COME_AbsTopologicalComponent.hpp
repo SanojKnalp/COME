@@ -2,6 +2,11 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <map>
+#include <algorithm>
+#include <stdexcept>
+
+
 namespace Mesh
 {
 	template <int dim, int spacedim>

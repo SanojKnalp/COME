@@ -13,6 +13,8 @@ It immediately eliminated the pain of writing my own linear algebra library whic
 ## Theory 
 
 ## Computation 
+### DoF and mesh handling
+It makes sense to treat the mesh and dofs differently.
 
 #### Linear Solvers - SOR
 Just because SOR is technically an option does not mean it's necessarily the most efficient choice. 

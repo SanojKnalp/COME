@@ -36,3 +36,11 @@ TEST_CASE("Vector row removal test")
 	REQUIRE(c.size() == 2);
 }
 
+TEST_CASE("Vector reinit")
+{
+	using namespace LinearAlgebra;
+	Vector<float> A;
+	REQUIRE(A.size() == 0);
+	A.reinit(5);
+	REQUIRE(A.size() == 5);
+}

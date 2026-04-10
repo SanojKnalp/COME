@@ -196,3 +196,13 @@ TEST_CASE("Sparse matrix eliminateRowAndColumn")
 
 
 }
+
+TEST_CASE("Sparse Matrix reinit")
+{
+    using namespace LinearAlgebra;
+    SparseMatrix<float> A;
+    REQUIRE(A.cols() == 0);
+    A.reinit(5);
+    REQUIRE(A.cols() == 5);
+}
+

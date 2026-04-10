@@ -13,7 +13,11 @@ namespace Mesh
 	{
 	public:
 		Volume() = default;
-		void linkNodes(std::array<int, 1 << spacedim>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
+		void linkNodes(const std::array<int, 8>& nodes, std::unordered_map<int, Node<dim, spacedim>*>& nodeIdMap);
+		void linkEdges(const std::array<int, 8>& nodes, std::map<std::pair<int, int>, Edge<dim, spacedim>*>& edgeMap);
+		void linkFaces(const std::array<int, 8>& nodes, std::map<std::array<int, 4>, Face<dim, spacedim>*>& faceMap);
+
+		std::vector<Node<dim, spacedim>*> getNodes() const;
 
 	private:
 

@@ -754,7 +754,6 @@ namespace ShapeFunctions
 
 }
 
-
 template class ShapeFunctions::FE_QP<1>;
 template class ShapeFunctions::FE_QP<2>;
 template class ShapeFunctions::FE_QP<3>;

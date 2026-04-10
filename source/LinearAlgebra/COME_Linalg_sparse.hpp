@@ -44,6 +44,11 @@ namespace LinearAlgebra {
             mat(i, j) = value;
         }
 
+        // reinits the matrix with the proper size
+        void reinit(size_t size) {
+            mat.zeros(size, size);
+        }
+
         // Frobenius norm
         T norm() const {
             return arma::norm(mat, "fro");

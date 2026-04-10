@@ -1,8 +1,10 @@
 #pragma once
 #include "LinearAlgebra/COME_Linalg_vector.hpp"
 #include "LinearAlgebra/COME_Linalg_sparse.hpp"
+#include "LinearAlgebra/COME_Linalg_dense.hpp"
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 namespace LinearSolvers {
 
@@ -28,7 +30,9 @@ namespace LinearSolvers {
 		void set_max_iteration_number(unsigned int new_max_iteration_number);
 
 		LinearAlgebra::Vector<T>& conjugate_gradient_solve(const LinearAlgebra::SparseMatrix<T>& A, const LinearAlgebra::Vector<T>& b, LinearAlgebra::Vector<T>& current_guess);
-		LinearAlgebra::Vector<T>& GmresSolve(const LinearAlgebra::SparseMatrix<T>& A, const LinearAlgebra::Vector<T>& b, LinearAlgebra::Vector<T>& current_guess) const;
+		LinearAlgebra::Vector<T>& GmresSolve(const LinearAlgebra::SparseMatrix<T>& A, const LinearAlgebra::Vector<T>& b, LinearAlgebra::Vector<T>& current_guess);
+		LinearAlgebra::Vector<T>& BiCGStabSolve(const LinearAlgebra::SparseMatrix<T>& A, const LinearAlgebra::Vector<T>& b, LinearAlgebra::Vector<T>& current_guess);
+		LinearAlgebra::Vector<T>& MINRESSolve(const LinearAlgebra::SparseMatrix<T>& A, const LinearAlgebra::Vector<T>& b, LinearAlgebra::Vector<T>& current_guess);
 		
 
 	private:

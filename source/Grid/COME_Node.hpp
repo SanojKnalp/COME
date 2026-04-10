@@ -11,13 +11,12 @@ namespace Mesh
 	public:
 		Node() = default;
 		Node(int id, std::array<double, spacedim> position) :
-		 DOFIndex_(id),position_(position) {
+		 position_(position) {
 		}
-		std::array<double, spacedim> getCoordinates()const ;
+		std::array<double, spacedim> getCoordinates() const ;
 	private:
 		std::array<double,spacedim> position_;
 		Node* subNode_ = nullptr;
-		int DOFIndex_;
 
 	};
 

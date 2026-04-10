@@ -16,11 +16,74 @@ namespace Mesh
 		}
 		return tokens;
 	}
-	template<int dim,int spacedim>
-	void Mesh<dim, spacedim>::addEdge(int node1, int node2)
+
+	template <int dim, int spacedim>
+	void Mesh<dim, spacedim>::addEdgeIfMissing(int nodeA, int nodeB)
 	{
+		auto [minNode, maxNode] = std::minmax(nodeA, nodeB);
+		std::pair key{ minNode, maxNode };
+
+		auto [it, inserted] = edgeMap_.try_emplace(key, nullptr);
+		if (inserted)
+		{
+			listOfEdges_.emplace_back(std::make_unique<Edge<dim, spacedim>>());
+			listOfEdges_.back()->linkNodes(std::array{ minNode,maxNode }, nodeIdMap_);
+		}
+	}
+	template <int dim, int spacedim>
+	void Mesh<dim, spacedim>::addFaceIfMissing(int nodeA, int nodeB, int nodeC, int nodeD)
+	{
+		// 1. Keep the original order for connectivity
+		std::array<int, 4> connectivity{ nodeA, nodeB, nodeC, nodeD };
+
+		// 2. Create a sorted version for the Map Key
+		if (nodeA > nodeB) std::swap(nodeA, nodeB);
+		if (nodeC > nodeD) std::swap(nodeC, nodeD);
+		if (nodeA > nodeC) std::swap(nodeA, nodeC);
+		if (nodeB > nodeD) std::swap(nodeB, nodeD);
+		if (nodeB > nodeC) std::swap(nodeB, nodeC);
+
+		std::array<int, 4> key{ nodeA, nodeB, nodeC, nodeD };
+
+		auto [it, inserted] = faceMap_.try_emplace(key, nullptr);
+
+		if (inserted)
+		{
+			auto newFace = std::make_unique<Face<dim, spacedim>>();
+
+			// Link nodes using original order so the face knows its shape
+			newFace->linkNodes(connectivity, nodeIdMap_);
+
+			// Link edges using original order so it finds (A,B), (B,C), etc.
+			newFace->linkEdges(connectivity, edgeMap_);
+
+			it->second = newFace.get(); // Don't forget to update the map pointer!
+			listOfFaces_.push_back(std::move(newFace));
+		}
 
 	}
+
+	template<int dim,int spacedim>
+	void Mesh<dim, spacedim>::addEdge(const std::array<int,1 << dim>& nodes)
+	{
+		addEdgeIfMissing(nodes[0], nodes[1]);
+		addEdgeIfMissing(nodes[1], nodes[2]);
+		addEdgeIfMissing(nodes[2], nodes[3]);
+		addEdgeIfMissing(nodes[0], nodes[3]);
+		if constexpr (dim == 3)
+		{
+			addEdgeIfMissing(nodes[0], nodes[4]);
+			addEdgeIfMissing(nodes[1], nodes[5]);
+			addEdgeIfMissing(nodes[2], nodes[6]);
+			addEdgeIfMissing(nodes[3], nodes[7]);
+			addEdgeIfMissing(nodes[4], nodes[5]);
+			addEdgeIfMissing(nodes[5], nodes[6]);
+			addEdgeIfMissing(nodes[6], nodes[7]);
+			addEdgeIfMissing(nodes[4], nodes[7]);
+		}
+
+	}
+
 	template<int dim, int spacedim>
 	void Mesh<dim, spacedim>::addNode(int index, const std::array<double, spacedim>& positions)
 	{
@@ -28,19 +91,20 @@ namespace Mesh
 		nodeIdMap_[index] = listOfNodes_.back().get();
 	}
 	template<int dim, int spacedim>
-	void Mesh<dim, spacedim>::addFace()
+	void Mesh<dim, spacedim>::addFace(const std::array<int, 1 << dim>& nodes)
 	{
-
-	}
-
-	template<int dim, int spacedim>
-	void Mesh<dim, spacedim>::addVolume()
-	{
+		// Correct Perimeter Winding (Counter-Clockwise/Clockwise, but NOT crossing diagonals)
+		addFaceIfMissing(nodes[0], nodes[1], nodes[2], nodes[3]); // Bottom
+		addFaceIfMissing(nodes[4], nodes[5], nodes[6], nodes[7]); // Top
+		addFaceIfMissing(nodes[0], nodes[1], nodes[5], nodes[4]); // Front (was 0,1,4,5)
+		addFaceIfMissing(nodes[1], nodes[2], nodes[6], nodes[5]); // Right (was 1,2,5,6)
+		addFaceIfMissing(nodes[2], nodes[3], nodes[7], nodes[6]); // Back  (was 2,3,6,7)
+		addFaceIfMissing(nodes[3], nodes[0], nodes[4], nodes[7]); // Left  (was 0,3,4,7)
 
 	}
 
     template<int dim, int spacedim>
-    void Mesh<dim, spacedim>::addElement(int elementnumber, const std::array<int, 1 << spacedim>& nodes)
+    void Mesh<dim, spacedim>::addElement(int elementnumber, const std::array<int, 1 << dim>& nodes)
     {
         //First, we create an Element
         auto element = std::make_unique<Element<dim, spacedim>>();
@@ -49,19 +113,42 @@ namespace Mesh
         //Next, we create the highest possible topological support we can and link it to our element
         if constexpr (dim == 1) {
             auto edge = std::make_unique<Edge<dim, spacedim>>();
-            elPtr->setTopologicalSupport(edge.get());
+			Edge<dim, spacedim>* edgePtr = edge.get();
+            elPtr->setTopologicalSupport(edgePtr);
             listOfEdges_.push_back(std::move(edge));
         }
         else if constexpr (dim == 2) {
             auto face = std::make_unique<Face<dim, spacedim>>();
-            elPtr->setTopologicalSupport(face.get());
+			Face<dim, spacedim>* facePtr = face.get();
+            elPtr->setTopologicalSupport(facePtr);
             listOfFaces_.push_back(std::move(face));
         }
         else if constexpr (dim == 3) {
             auto volume = std::make_unique<Volume<dim, spacedim>>();
-            elPtr->setTopologicalSupport(volume.get());
+			Volume<dim, spacedim>* volPtr = volume.get();
+            elPtr->setTopologicalSupport(volPtr);
             listOfVolumes_.push_back(std::move(volume));
         }
+		// Here we create our edges (if we are higher than dim 1)
+		if constexpr (dim == 2)
+		{
+			addEdge(nodes);
+		}
+		else if constexpr (dim == 3)
+		{
+			//here, we need to create and set the edges with respect to the correct numbering
+			//Strategy here: Extract all the different node pairs and then throw them into addEdge()
+			//There we check if we have the edge already or not.
+			//Important for edges: Sort. Smaller number first to make life easier. But we do that in addEdge
+
+			addEdge(nodes); //fill with correct indices->current issue. How do we link volume and edges????
+		}
+		//Here we create our Faces. We don't need it for dim == 2 because we already created our face.
+		if constexpr (dim == 3)
+		{
+			//same thing here again for faces. Very simple indeed. Again sort 
+			addFace(nodes);
+		}
 
 		//Here we link our nodes
 		//Here we use a little trick that because we only access the dim we can immediately link the correct element
@@ -72,51 +159,17 @@ namespace Mesh
 		else if constexpr (dim == 2)
 		{
 			listOfFaces_.back()->linkNodes(nodes, nodeIdMap_);
+			listOfFaces_.back()->linkEdges(nodes, edgeMap_);
 		}
 		else if constexpr (dim == 3)
 		{
 			listOfVolumes_.back()->linkNodes(nodes, nodeIdMap_);
-		}
-
-		// Here we create our edges (if we are higher than degree 1)
-		if constexpr (dim == 2)
-		{
-
-		}
-		else if constexpr (dim == 3)
-		{
-			//here, we need to create and set the edges with respect to the correct numbering
-			//For details look into CalculiX manual
-			//Strategy here: Extract all the different node pairs and then throw them into addEdge()
-			//There we check if we have the edge already or not.
-			//Important for edges: Sort. Smaller number first to make life easier. But we do that in addEdge
-			for (int i = 0; i < 12; i++)
-			{
-				//addEdge(nodes[], nodes[]); //fill with correct indices->current issue. How do we link volume and edges????
-
-			}
-			std::cout << "Nodes in set" << std::endl;
-			std::cout << nodes[0] << std::endl;
-			std::cout << nodes[1] << std::endl;
-			std::cout << nodes[2] << std::endl;
-			std::cout << nodes[3] << std::endl;
-			std::cout << nodes[4] << std::endl;
-			std::cout << nodes[5] << std::endl;
-			std::cout << nodes[6]<< std::endl;
-			std::cout << nodes[7] << std::endl;
-
-
-
-		}
-		//Here we create our Faces. We don't need it for dim == 2 because we already created our face.
-		if constexpr (dim == 3)
-		{
-			//same thing here again for faces. Very simple indeed. Again sort 
+			listOfVolumes_.back()->linkEdges(nodes, edgeMap_);
+			listOfVolumes_.back()->linkFaces(nodes, faceMap_);
 		}
 
 
-
-
+		listOfElements_.push_back(std::move(element));
 
         
     }
@@ -176,8 +229,8 @@ namespace Mesh
 			}
 			if (section == AbaqusMeshSection::ELEMENT)
 			{
-				std::array<int, 1 << spacedim> nodes;			
-				for (int i = 0; i < (1 << spacedim); i++)
+				std::array<int, 1 << dim> nodes;			
+				for (int i = 0; i < (1 << dim); i++)
 				{
 					nodes[i] = std::stoi(fields[i + 1]);		//store all the node indices that belong to that one element
 				}
@@ -185,19 +238,48 @@ namespace Mesh
 			}
 
 		}
-
-		std::cout << "Size of node_vector:" << listOfNodes_.size() << std::endl;
-		std::cout << "Size of edge_vector:" << listOfEdges_.size() << std::endl;
-		std::cout << "Size of face_vector:" << listOfFaces_.size() << std::endl;
-        std::cout << "Size of volume_vector:" << listOfVolumes_.size() << std::endl;
-
-
 	}
 
 	template<int dim, int spacedim>
 	void Mesh<dim, spacedim>::read_msh(std::istream& in)
 	{
 
+	}
+
+	template<int dim, int spacedim>
+	const std::unordered_map<int, Node<dim, spacedim>*>& Mesh<dim, spacedim>::getNodeMap() const
+	{
+		return nodeIdMap_;
+	}
+
+	template <int dim, int spacedim>
+	const std::vector<std::unique_ptr<Node<dim, spacedim>>>& Mesh<dim, spacedim>::getNodes() const
+	{
+		return listOfNodes_;
+	}
+
+	template <int dim, int spacedim>
+	const std::vector<std::unique_ptr<Edge<dim, spacedim>>>& Mesh<dim, spacedim>::getEdges() const
+	{
+		return listOfEdges_;
+	}
+
+	template <int dim, int spacedim>
+	const std::vector<std::unique_ptr<Face<dim, spacedim>>>& Mesh<dim, spacedim>::getFaces() const
+	{
+		return listOfFaces_;
+	}
+
+	template <int dim, int spacedim>
+	const std::vector<std::unique_ptr<Volume<dim, spacedim>>>& Mesh<dim, spacedim>::getVolumes() const
+	{
+		return listOfVolumes_;
+	}
+
+	template <int dim, int spacedim>
+	const std::vector<std::unique_ptr<Element<dim, spacedim>>>& Mesh<dim,spacedim>::getElements() const
+	{
+		return listOfElements_;
 	}
 
 }
