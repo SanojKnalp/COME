@@ -12,6 +12,12 @@ namespace Mesh
 		}
 	}
 
+    template <int dim, int spacedim>
+    std::vector<Node<dim, spacedim>*> Volume<dim, spacedim>::getNodes() const
+    {
+        return listOfNodes_;
+    }
+
 	template <int dim, int spacedim>
     void Volume<dim, spacedim>::linkEdges(const std::array<int, 8>& nodes, std::map<std::pair<int, int>, Edge<dim, spacedim>*>& edgeMap)
     {
@@ -91,7 +97,7 @@ namespace Mesh
         int hit = 0;
         for (const auto& edge : listOfEdges_)
         {
-            for (const auto& node : edge->getListOfNodes())
+            for (const auto& node : edge->getNodes())
             {
                 if (node->getCoordinates() == sharedNode && hit == 0)
                 {

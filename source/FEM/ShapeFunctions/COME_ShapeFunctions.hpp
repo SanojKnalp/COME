@@ -17,6 +17,8 @@ namespace ShapeFunctions
 		void setPolynomialDegree(const unsigned int p);
 
 		bool isDiscontinuous() const;
+
+		unsigned int n_dofs_per_cell() const;
 	protected:
 		unsigned int polynomialDegree_; //polynomial degree of the respective element
 		const bool isDiscontinuous_;   //DofHandler identifier if discontinuous or not. Used for DoF distribution
@@ -40,5 +42,11 @@ namespace ShapeFunctions
 	bool ShapeFunctions<dim,spacedim>::isDiscontinuous() const
 	{
 		return isDiscontinuous_;
+	}
+
+	template <int dim, int spacedim>
+	unsigned int ShapeFunctions<dim, spacedim>::n_dofs_per_cell() const
+	{
+		return (polynomialDegree_ + 1) ^ dim;
 	}
 }

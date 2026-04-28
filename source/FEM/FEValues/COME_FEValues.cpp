@@ -26,8 +26,7 @@ namespace FEM
 	template <int dim, int spacedim>
 	double FEValues<dim, spacedim>::JacobianDeterminant()
 	{
-		//add stuff here
-		//later
+
 	}
 
 	

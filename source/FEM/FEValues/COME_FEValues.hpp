@@ -1,9 +1,16 @@
 #pragma once
 #include "FEM/ShapeFunctions/COME_ShapeFunctions.hpp"
 #include "FEM/Quadrature/COME_Quadrature.hpp"
+#include "Grid/COME_AbsTopologicalComponent.hpp"
 
 #include <array>
 #include <vector>
+#include <iostream>
+
+namespace Mesh {
+	template<int dim, int spacedim>
+	class AbsTopologicalComponent;
+}
 
 namespace FEM
 {
@@ -21,7 +28,7 @@ namespace FEM
 
 		const double& shape_value(const unsigned int index, const unsigned int q_point) const;
 		const double& JxW(const unsigned int q_point) const;
-		void reinit();
+		void reinit(const Mesh::AbsTopologicalComponent<dim,spacedim>& cell);
 
 	private:
 
@@ -30,6 +37,7 @@ namespace FEM
 		const bool update_values_;
 		std::vector<std::array<double, dim>> qPoints_;
 		std::vector<double> qWeights_;
+		std::vector<std::array<double, spacedim>> cell_nodes;
 
 
 
@@ -82,6 +90,16 @@ namespace FEM
 				}
 			}
 
+		}
+	}
+
+	template <int dim, int spacedim>
+	void FEValues<dim, spacedim>::reinit(const Mesh::AbsTopologicalComponent<dim, spacedim>& cell)
+	{
+		cell_nodes.clear();
+		for (auto& node : cell.getNodes())
+		{
+			cell_nodes.push_back(node->getCoordinates());
 		}
 	}
 }

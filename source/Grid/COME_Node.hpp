@@ -14,6 +14,7 @@ namespace Mesh
 		 position_(position) {
 		}
 		const std::array<double, spacedim> getCoordinates() const ;
+		std::vector<Node<dim, spacedim>*> getNodes() const;
 	private:
 		std::array<double,spacedim> position_;
 		Node* subNode_ = nullptr;

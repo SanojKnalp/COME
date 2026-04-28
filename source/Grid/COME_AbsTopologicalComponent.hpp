@@ -5,12 +5,21 @@
 #include <map>
 #include <algorithm>
 #include <stdexcept>
+#include "FEM/FEValues/COME_FEValues.hpp"
+#include "Grid/COME_Node.hpp"
+
+//forward declaration:
+template<int dim, int spacedim>
+class FEM::FEValues;
 
 
 namespace Mesh
 {
 	template <int dim, int spacedim>
 	class Element;
+
+	template <int dim, int spacedim>
+	class Node;
 
 	template <int dim, int spacedim = dim>
 	class AbsTopologicalComponent
@@ -25,12 +34,16 @@ namespace Mesh
 		const std::vector<unsigned int>& get_dofs() const;
 		void clear_dofs();
 
+		virtual std::vector<Node<dim, spacedim>*> getNodes() const = 0;
+
 	protected:
 		unsigned int polynomialDegree_ = 1;
 		bool isActive_ = false;
 		std::vector<Element<dim,spacedim>*> listOfAdjacentElements_;
 		unsigned int refinementLevel_ = 0;
 		std::vector<unsigned int> dof_ids_;
+
+		friend class FEM::FEValues<dim,spacedim>;
 
 	};
 

@@ -27,7 +27,7 @@ namespace Mesh
 	}
 
 	template <int dim, int spacedim>
-	const std::vector<Node<dim, spacedim>*>& Edge<dim, spacedim>::getListOfNodes() const
+	std::vector<Node<dim, spacedim>*> Edge<dim,spacedim>::getNodes() const
 	{
 		return listOfNodes_;
 	}

@@ -61,7 +61,7 @@ namespace Mesh
         bool hit = false;
         for (const auto& edge : listOfEdges_)
         {
-            for (const auto& node : edge->getListOfNodes())
+            for (const auto& node : edge->getNodes())
             {
                 if (node->getCoordinates() == sharedNode && !hit)
                 {
@@ -88,6 +88,11 @@ namespace Mesh
         return result;
 
 
+    }
+    template <int dim, int spacedim>
+    std::vector<Node<dim, spacedim>*> Face<dim, spacedim>::getNodes() const
+    {
+        return listOfNodes_;
     }
 
 }

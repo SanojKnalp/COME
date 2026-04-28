@@ -17,7 +17,7 @@ namespace Mesh
 
 		std::array<double, spacedim> interpolate(unsigned int i, unsigned int p);
 
-		const std::vector<Node<dim, spacedim>*>& getListOfNodes() const;
+		std::vector<Node<dim, spacedim>*> getNodes() const;
 
 
 	private:

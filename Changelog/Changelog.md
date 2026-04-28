@@ -1,11 +1,17 @@
 # Changelog
 All the changes i make to the code are documented here.
 ## 2026 
-### February
+### April
+#### 28.04.2026 
+Worked on connecting cells and the mappings for the computation of the jacobian later.
+#### 10.04.2026
+Updated the DoFHandler to now properly distribute the DoFs.
+Next Step: We need an active cell iterator, which just loops over all the active cells which we can use later for the computation of the jacobian. Once we have that we are good.
 #### 02.04.2026
 This is more like a collection of everything since i forgot to update everything:
 Mesh readIn seems to work. DofHandler implementation was started.
 Added a GMRES, MINRES and BiCGStab solver.
+### February
 #### 22.02.2026
 Reworked current and finished implementation of basic QGauss weights and coordinates in 1d. Also added it's constructor.
 #### 17.02.2026

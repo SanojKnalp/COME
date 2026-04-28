@@ -8,6 +8,12 @@ namespace Mesh
 	{
 		return position_;
 	}
+
+	template <int dim, int spacedim>
+	std::vector<Node<dim, spacedim>*> Node<dim,spacedim>::getNodes() const
+	{
+		return { const_cast<Node<dim, spacedim>*>(this) };
+	}
 }
 
 template class Mesh::Node<1>;
