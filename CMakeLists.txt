@@ -4,6 +4,8 @@ project(COME LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/source)
+
 # Armadillo (via vcpkg)
 find_package(Armadillo CONFIG QUIET)
 
@@ -32,5 +34,4 @@ target_link_libraries(COME PRIVATE come_lib)
 # Tests
 enable_testing()
 add_subdirectory(UnitTests)
-target_compile_definitions(UnitTests PRIVATE CATCH_CONFIG_NO_POSIX_SIGNALS)
 add_subdirectory(SystemTests)
