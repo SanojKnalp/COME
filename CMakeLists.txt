@@ -32,4 +32,5 @@ target_link_libraries(COME PRIVATE come_lib)
 # Tests
 enable_testing()
 add_subdirectory(UnitTests)
+target_compile_definitions(UnitTests PRIVATE CATCH_CONFIG_NO_POSIX_SIGNALS)
 add_subdirectory(SystemTests)
