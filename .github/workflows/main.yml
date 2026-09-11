@@ -16,10 +16,8 @@ jobs:
           sudo apt-get install -y clang-tidy libarmadillo-dev
       - name: Run clang-tidy
         run: |
-          mkdir build && cd build
-          cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-          cd ..
-          clang-tidy $(find . -name '*.cpp') -- -I./include
+          cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+          clang-tidy -p build $(find source UnitTests main.cpp -name '*.cpp')
 
   build_and_test:
     name: Build project and run tests
